@@ -21,3 +21,12 @@ for(var k=2; k<10; k++){
     }
 }
 
+var result = 0;
+var box = 0;
+for(var j=1; ;j++){    
+    box = prompt(j + '번째 숫자를 입력하세요');
+    if(box != null) result += parseInt(box);
+    else if(box == null) break;
+}
+prompt("입력하신 수들의 합은 "+result+" 입니다.");
+
