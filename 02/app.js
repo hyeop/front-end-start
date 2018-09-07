@@ -21,6 +21,7 @@ for(var k=2; k<10; k++){
     }
 }
 
+
 var result = 0;
 var box = 0;
 for(var j=1; ;j++){    
