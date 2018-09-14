@@ -7,3 +7,12 @@
     }
     confirm("입력하신 숫자의 합은 " + sum + "입니다")
 })();
+
+
+
+//window.open("https://www.daum.net", '', 'width=300, height=300');
+
+//location.href = "www.naver.com";
+// location.reload();
+//history.back();
+// history.go(1); 
