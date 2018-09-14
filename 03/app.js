@@ -1,23 +1,9 @@
-
-
-//"3번 문제 (구구단 출력)";    
-function gugudan(num){
-   // for(var k=2; k<10; k++){
-    console.log(num + '단');
-    for(var n=1; n<10; n++){
-        console.log(num+' * '+n+' = '+num*n);
+(function test(){
+    var i = 0 , sum = 0;
+    while(1){
+        var result = prompt(++i + " 번째 숫자를 입력하세요");
+        if(!result) break;
+        sum += parseInt(result);
     }
-   // }
-}
-alert(1);
-for(var i = 2; i<10; i++){
-    gugudan(i);
-}
-
-
-var name = "global";
-function test() {
-  console.log(name);
-  var name = "local";
-  console.log(name);
-}
+    confirm("입력하신 숫자의 합은 " + sum + "입니다")
+})();
