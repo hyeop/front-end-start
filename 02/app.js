@@ -31,5 +31,5 @@ for(var k=2; k<10; k++){
         if(!result) break;
         sum += parseInt(result);
     }
-    prompt("입력하신 수들의 합은 "+sum+" 입니다.");
+    confirm("입력하신 수들의 합은 "+sum+" 입니다.");
 })();
