@@ -1,4 +1,3 @@
-
 var todayPhoto = [
     {"url":"http://media.daum.net/photo/2841","img":"http://icon.daumcdn.net/w/c/12/05/82877085750988319.jpeg","title":"&quot;뜨면 끝장&quot; 최강 공격헬기 성능이 설마","id":"20120516082207657"}
     ,{"url":"http://media.daum.net/entertain/photo/gallery/?gid=100320","img":"http://icon.daumcdn.net/w/c/12/05/82876693901189319.jpeg","title":"&#39;오늘만&#39; 필리핀 새댁 5개국어 능통 엄친딸","id":"20120516091011626"}
@@ -14,6 +13,7 @@ var start_page = 1, page_count = 3;
 var page_number = parseInt(todayPhoto.length / page_count) + 1; 
 var wrap = document.getElementById('wrap');
 var p_text = document.getElementById("p_text");
+
 
 function print_imag(start_page){
     var str = '';
