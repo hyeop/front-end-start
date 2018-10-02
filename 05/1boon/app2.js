@@ -1,20 +1,37 @@
 var page = 1;
 var url = 'https://1boon.kakao.com/ch/enter.json?page='+page+'&pagesize=10';
+var str_left = '';
+var str_main = '';
+var str_button = "<button id='more' onclick='pageup()'>더보기</button>";
+var select = 0;
+var k = 0;
 
 getUrlData(url, print);
 
 function print(json) {
-  console.log(json);
-
-  var str = '';
-
   for (var i = 0; i < json.data.length; i++) {
-    var title = json.data[i].title;
-    var path = json.data[i].path;
-    str += `<a href="http://1boon.kakao.com/${path}" target="_blank">${title}</a><br>`;  
+    var img = json.data[i].img;
+    str_left += `<div class="drop" id="img`+ (k++) +`"onmouseenter="get_index(this.id)"><img src="${img}"></div><br>`;  
   }
+  document.querySelector('.side').innerHTML = str_left + str_button;
+}
 
-  document.getElementById('wrap').innerHTML = str;
+function print_main(json) {
+  
+  img = json.data[select].img;
+  var title = json.data[select].title;
+  var path = json.data[select].path;
+  str_main = `<img src="${img}"><br><a href="http://1boon.kakao.com/${path}" target="_blank">${title}</a>`;
+  document.querySelector('.drop_content').innerHTML = str_main;
+}
+
+function get_index(index_){
+  select = Number(index_.replace('img',''));
+  var print_page = parseInt(select / 10) + 1;
+  console.log(print_page);
+  select = select % 10;
+  url = 'https://1boon.kakao.com/ch/enter.json?page='+ print_page +'&pagesize=10';
+  getUrlData(url, print_main);
 }
 
 
@@ -31,7 +48,8 @@ function getUrlData(url, callback) {
 }
 
 
-document.getElementById('more').onclick=function(){
+function pageup(){
     page++;
+    url = 'https://1boon.kakao.com/ch/enter.json?page='+page+'&pagesize=10';
     getUrlData(url, print);
 }
