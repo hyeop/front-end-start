@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1boon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./app.css">
+    <style>.list{margin:10px; padding:10px}</style>
+</head>
+<body>
+<div class="container">
+
+    <div class="menu">
+        <a href="#" id="home" onClick="window.location.reload()"><br>
+            <h1>1boon</h1><br>
+        </a>
+        <ul class="nav nav-tabs">
+            <!-- 선택된탭:선택된 탭에 .active    -->
+            <li id="trending" class="active"><a href="#">트렌딩</a></li>
+            <li id="issue" class=""><a href="#">이슈</a></li>
+            <li id="enter"><a href="#">엔터</a></li>
+        </ul>
+        <br>
+    </div>
+
+    <div id="list"><br>
+        <div class="trending_con" >http://1boon.kakao.com/ch/trending.json</div><br><hr><br>
+        <div class="issue_con">http://1boon.kakao.com/ch/issue.json</div><br><hr><br>
+        <div class="enter_con">http://1boon.kakao.com/ch/enter.json</div><br>
+    </div>
+
+    <div id="choice_section"><br>
+        <div class="container"></div>
+        <div class="text-center" id ='more'>
+            <span class="glyphicon glyphicon-refresh spin"></span> 로딩중</div><br>
+        <div class="text-center">
+            <button id ='more_button' type="button" class="btn btn-default">More ..</button></div>
+    </div>
+    
+</div>
+<script src="jquery-3.3.1.js"></script>
+
+<script src="./show_all_menulist.js"></script>
+<script src="./print.js"></script>
+<script src="./getUrlData.js"></script>
+
+<script src="./events/adjust_active_by_scroll.js"></script>
+<script src="./events/menu_click.js"></script>
+<script src="./events/menu_enter.js"></script>
+<script src="./events/morebutton_click.js"></script>
+
+<script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* ------------------- 메뉴바 ----------------------- */
+
+.menu{
+    position : sticky;                  
+    top:0px;                            
+    z-index: 2;                     /* menu 칸을 제일 앞으로 뺀다 . sticky 관련*/
+    background-color : white;       /* bgcolor를 주어야 더 매끄럽다(sticky때문에) */
+}
+.menu > ul > li{
+    font-weight: bold;
+}                           /* menu bar 글씨 두껍게 */
+
+#home{
+    text-decoration: none;
+}                                    /* home 버튼 css */
+#home:hover{
+    color: red;
+}                                       /* home 버튼 마우스 올렸을 때 css */
+
+
+
+/* ------------------- content 배열 ----------------------- */
+
+#list > div > div{
+    margin: 3px;
+    float : left;
+    position : relative;
+    height : 220px;
+    width : 270px;
+}
+
+/* ------------------- content 내부 ----------------------- */
+
+/* --- coverImage 관련 --- */
+a > img{
+    width : 100%;
+    height : 100%;
+    opacity: 0.6;
+}                   /* 이미지 출력 관련 */
+
+a>img:hover{        
+    opacity : 1;
+}                   /* 사진에 올려놓을 시 진하게 */
+
+.coverimage{
+    height : 90%;
+    width : auto;      
+}                       /* 주어진 할당 공간 중 90 % 가 이미지가 되도록한다 */
+
+/* --- 기사 제목 관련 --- */
+
+.title > a{
+    color : rgba(255, 255, 255, 0.774);
+    font-weight: bold;
+    text-decoration: none;
+    text-align:center;
+}                     
+
+.title > a:hover{
+    color : rgba(255, 255, 255, 1);
+    opacity: 1;
+}                       /* title 올려놓을 시 */
+
+.title{
+    top:63%;
+    background-color : rgba(0, 0, 0, 0.35) ;
+    position : absolute;
+    height: 60px;
+    width : 100%;
+    text-align: center;
+    z-index: 1;
+    padding : 10px;
+      
+}                   /* title 을 사진에 녹여서 표현 */
+
+/* --- 조회수 관련 --- */
+
+.contents{                             /* 조회수 출력 조정 위치 조정 */
+    vertical-align: text-bottom;    /* div 의 아래 쪽 */
+    text-align: right;              /* 오른쪽 정렬 */
+}
+
+
+
+hr{
+    width : 100%;
+    border : 0.7px solid rgb(156, 160, 160);
+}
+
+
+
+/* ------------------- Choice_section 부분 ----------------------- */
+
+/* --- Contents 배치부분 --- */
+
+#choice_section > div > div{
+    margin: 3px;
+    float: left;
+    position : relative;
+    height : 220px;
+    width : 270px;
+}
+
+/* --- 로딩중 출력 관련 --- */
+
+#more{
+    display : none;
+}
+
+.spin{
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+/* --- 더보기 출력 관련 --- */
+
+#more_button{
+    width :100%;
+    background-color: rgba(7, 7, 7, 0.342);
+    color : white;
+    margin-bottom: 10px;
+    border : none;
+}
+
+#more_button:hover{
+    color : black;
+    opacity : 0.7;
+    font-weight: bold;
+}
+

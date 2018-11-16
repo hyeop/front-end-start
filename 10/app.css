@@ -1,0 +1,31 @@
+#box{
+    width : 20px;
+    height : 20px;
+    background-color : red;
+    position : absolute;   
+    overflow : hidden;
+}
+#box :hover{
+    cursor: pointer;
+}
+#wrap{
+    align-items: center;
+}
+#gameboard{
+    
+    width : 300px;
+    height : 300px;
+    border : 1px solid black;
+    position : relative; 
+}
+#print_set{
+    text-align : center;
+    
+}
+
+div > span{
+    color : red;
+    font-weight : bold;
+    font-size : 20px;
+    display:inline;
+}
