@@ -1,5 +1,5 @@
 var uri = 'https://dapi.kakao.com/v2/search/web';
-var appkey = '2a47db4cedcec2962ab36f43d726679f';
+var appkey = '2d0cf470a7811dc9f4cfaa1c9758e24a';
 var query = '제주대학교';
 var inst;
 

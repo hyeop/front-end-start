@@ -8,14 +8,6 @@ var k = 0;
 
 getUrlData(url, print);
 
-function print(json) {
-  for (var i = 0; i < json.data.length; i++) {
-    var img = json.data[i].img;
-    str_left += `<div class="drop" id="img`+ (k++) +`"onmouseenter="get_index(this.id)"><img src="${img}"></div><br>`;  
-  }
-  document.querySelector('.side').innerHTML = str_left + str_button;
-}
-
 function print_main(json) {
   
   img = json.data[select].img;
@@ -34,6 +26,13 @@ function get_index(index_){
   getUrlData(url, print_main);
 }
 
+function print(json) {
+  for (var i = 0; i < json.data.length; i++) {
+    var img = json.data[i].img;
+    str_left += `<div class="drop" id="img`+ (k++) +`"onmouseenter="get_index(this.id)"><img src="${img}"></div><br>`;  
+  }
+  document.querySelector('.side').innerHTML = str_left + str_button;
+}
 
 function getUrlData(url, callback) {
   fetch(url)
